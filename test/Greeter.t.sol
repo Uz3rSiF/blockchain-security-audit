@@ -3,6 +3,7 @@ pragma solidity 0.8.24;
 
 import {Test} from "forge-std/Test.sol";
 import {Greeter} from "../src/Greeter.sol";
+import {GreeterVulnerable} from "../src/GreeterVulnerable.sol";
 
 contract GreeterTest is Test {
     Greeter public greeter;
@@ -25,5 +26,12 @@ contract GreeterTest is Test {
     function test_OwnerCanChangeGreeting() public {
         greeter.setGreeting("Salam");
         assertEq(greeter.greeting(), "Salam");
+    }
+    
+    function test_Vulnerable_AttackerChangesGreeting() public {
+        GreeterVulnerable v = new GreeterVulnerable("Hello");
+        vm.prank(attacker);
+        v.setGreeting("hacked");
+        assertEq(v.greeting(), "hacked");
     }
 }

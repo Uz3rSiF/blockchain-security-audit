@@ -11,7 +11,7 @@ contract Greeter {
     }
 
     function setGreeting(string calldata newGreeting) external {
-        require(msg.sender == owner, "not owner");
+	require(msg.sender == owner, "not owner");
         greeting = newGreeting;
     }
 }
