@@ -10,8 +10,8 @@ contract OwnedBox {
     }
 
     modifier onlyOwner() {
+	_;
         require(msg.sender == owner, "not owner");
-        _;
     }
 
     function setNumber(uint256 n) public onlyOwner {

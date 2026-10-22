@@ -1,3 +1,6 @@
 W1D1 | بيئة Foundry+Git+VERSIONS.md | Completed | https://github.com/Uz3rSiF/blockchain-security-audit | forge 1.8.5, solc 0.8.24, 2 tests passed | 2026-10-17
 W1D2 | Counter + Greeter (fixed/vulnerable) + tests + Break It | Completed | (رابط الـ commit) | forge test: X passed | 2026-10-18
-W1D3 | Data types + storage slots (predict vs actual) | Completed | repo + جدول في المحادثة + forge inspect | مخرج inspect مطابق للقواعد؛ توقعي الأول: owner في slot مستقل (غلط)، الصح packing مع flag؛ أسئلة 6/6 | 2026-10-18
+W1D3 | Data types + storage slots (predict vs actual) | Completed | repo + جدول في المحادثة + forge inspect | مخرج inspect مطابق للقواعد؛ توقعي الأول: owner في slot مستقل (غلط)، الصح packing مع flag؛ أسئلة 6/6 | 2026-10-1
+W1D4 | Visibility + mutability + modifiers + errors + gas table | Completed | commit 4ec1296 | 21 tests passed؛ تجارب كسر: 9582/2527/8961؛ _; قبل require: يعدّي لكن gas 57418 vs 35304؛ require/custom: size 877 vs 710 | 2026-10-19
+W1D4-review | أسئلة 3 و4 + تجربة payable | Needs Review | — | تتراجع في مراجعة نهاية الأسبوع 1 | 2026-10-19
+
